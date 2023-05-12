@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dk.sdu.mmmi.cbse</groupId>
+    <groupId>dk.sdu.lauge</groupId>
     <artifactId>shadedlibgdx</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>shadedlibgdx</name>
 
@@ -21,8 +21,8 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub sweat-tek Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/sweat-tek/ShadedLibGDX</url>
+            <name>GitHub Lauge Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Lauge/ShadedLibGDX</url>
         </repository>
     </distributionManagement>
 
@@ -49,6 +49,11 @@
         <dependency>
             <groupId>com.badlogicgames.gdx</groupId>
             <artifactId>gdx-backend-lwjgl3</artifactId>
+            <version>${libGDX.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.badlogicgames.gdx</groupId>
+            <artifactId>gdx-backend-headless</artifactId>
             <version>${libGDX.version}</version>
         </dependency>
         <dependency>
@@ -123,9 +128,9 @@
                             <modules>
                                 <module>
                                     <artifact>
-                                        <groupId>dk.sdu.mmmi.cbse</groupId>
+                                        <groupId>dk.sdu.lauge</groupId>
                                         <artifactId>shadedlibgdx</artifactId>
-                                        <version>1.0.1-SNAPSHOT</version>
+                                        <version>1.0-SNAPSHOT</version>
                                     </artifact>
                                     <moduleInfoSource>
                                         module com.badlogic.gdx {
@@ -135,6 +140,7 @@
                                         exports com.badlogic.gdx.graphics;
                                         exports com.badlogic.gdx.backends.lwjgl3;
                                         exports com.badlogic.gdx.graphics.glutils;
+                                        exports com.badlogic.gdx.backends.headless;
                                         }
                                     </moduleInfoSource>
                                 </module>
